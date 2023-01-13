@@ -9,7 +9,7 @@ IHost host = Host.CreateDefaultBuilder(args)
     .ConfigureServices(services =>
     {
         services.AddOpenAIService(settings => settings.ApiKey = "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");
-        //services.AddHostedService<openAiCompletionService>();
+        services.AddHostedService<openAiCompletionService>();
         services.AddHostedService<OpenAIImageService>();
     })
     .Build();
